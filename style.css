@@ -10,7 +10,8 @@ body {
     position: relative;
     
 }
-.container {
+
+#container {
     margin: 0;
     overflow: hidden;
     background: #ffe9a6; 
@@ -19,8 +20,6 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    
-    
 }
 
 #clock {
