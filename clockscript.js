@@ -15,4 +15,3 @@ setInterval(() => {
 
     clock.textContent = hr + ":" + min +":" + sec
 }), 1000
-
