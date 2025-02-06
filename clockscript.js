@@ -88,6 +88,7 @@ function applyTheme(theme){
     document.getElementById('clock').style.textShadow = theme.clockTextShadow;
 };
 
+
 setTimeout(() => {
     setInterval(getTheme, 60000);
     getTheme(cycleHour);
