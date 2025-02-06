@@ -28,23 +28,7 @@ var cycleDate = new Date();
 let cycleHour = cycleDate.getHours();
 var currentTheme
 
-function getTheme(a){
-    if ( 6 <= a < 12){
-        currentTheme = "morning";
-    }if (12 <= a < 18){
-        currentTheme = "afternoon";
-    }if (18 <= a <= 23){
-        currentTheme = "evening";
-    }else if ( 0 >= a < 6){
-        currentTheme = "night";
-    }
-console.log(currentTheme);
-};
 
-setTimeout(() => {
-    setInterval(getTheme, 60000);
-    getTheme(cycleHour);
-}, (60 - cycleDate.getSeconds()) * 1000);
 
 
 const themes = {
@@ -82,4 +66,30 @@ const themes = {
     }
 };
 
+function getTheme(a){
+    if ( 6 <= a < 12){
+        currentTheme = themes.morning;
+    }if (12 <= a < 18){
+        currentTheme = themes.afternoon;
+    }if (18 <= a <= 23){
+        currentTheme = themes.evening;
+    }else if ( 0 >= a < 6){
+        currentTheme = themes.night;
+    }
+console.log(currentTheme);
+};
 
+
+function applyTheme(theme){
+    document.getElementById('container').style.background = theme.containerBackground;
+    document.getElementById('container').style.color = theme.containerColor;
+    document.getElementById('clock').style.boxShadow = theme.clockBoxShadow;
+    document.getElementById('clock').style.background = theme.clockBackground;
+    document.getElementById('clock').style.textShadow = theme.clockTextShadow;
+};
+
+setTimeout(() => {
+    setInterval(getTheme, 60000);
+    getTheme(cycleHour);
+    applyTheme(currentTheme);
+}, (60 - cycleDate.getSeconds()) * 1000);
