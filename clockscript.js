@@ -24,27 +24,6 @@ setInterval(() => {
 }, 1000);
 
 
-setInterval(() => {
-    var cycleDate = new Date();
-    
-    let cycleHour = cycleDate.getHours();
-    
-    function getTheme(a){
-        if ( 6 <= a < 12){
-            return "morning";
-        }if (12 <= a < 18){
-            return "afternoon";
-        }if (18 <= a <= 23){
-            return "evening";
-        }if ( 0 <= a < 6){
-            return"night";
-        }
-    }
-    getTheme(cycleHour);
-
-}, 60000) 
-
-
 var cycleDate = new Date();
 let cycleHour = cycleDate.getHours();
 var currentTheme
