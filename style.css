@@ -20,6 +20,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    transition: background-color 1s ease, color, 1s ease;
 }
 
 #clock {
@@ -32,6 +33,7 @@ body {
     border-radius: 15px; 
     box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
     animation : glow 10s infinite;
+    transition: text-shadow 1s ease, background 1s ease, border 1s ease, box-shadow 1s, ease;
 }
 
 
