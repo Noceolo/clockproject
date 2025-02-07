@@ -94,3 +94,6 @@ setTimeout(() => {
     getTheme(cycleHour);
     applyTheme(currentTheme);
 }, (60 - cycleDate.getSeconds()) * 1000);
+
+getTheme(cycleHour);
+applyTheme(currentTheme);
