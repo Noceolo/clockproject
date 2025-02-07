@@ -36,6 +36,13 @@ body {
     transition: text-shadow 1s ease, background 1s ease, border 1s ease, box-shadow 1s, ease;
 }
 
+#sun, #moon {
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    transition: left 1s linear, top 1s linear, opacity 1s ease;
+}
+
 
 
   /* @keyframes glow {
