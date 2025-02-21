@@ -43,6 +43,17 @@ body {
     transition: left 1s linear, top 1s linear, opacity 1s ease;
 }
 
+#sun {
+    left: 10px;
+}
+
+#moon {
+    left: 10px;
+    opacity: 0;
+}
+
+
+
 
 
   /* @keyframes glow {
