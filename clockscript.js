@@ -1,8 +1,11 @@
+let cycleDate = new Date();
+let cycleHour = cycleDate.getHours();
+let currentTheme;
 
 setInterval(() => {
     
     const clock = document.getElementById("clock")
-    var date = new Date();
+    let date = new Date();
     
     let hr = date.getHours();
     let min = date.getMinutes();
@@ -24,9 +27,6 @@ setInterval(() => {
 }, 1000);
 
 
-var cycleDate = new Date();
-let cycleHour = cycleDate.getHours();
-var currentTheme
 
 
 
@@ -67,16 +67,22 @@ const themes = {
 };
 
 function getTheme(a){
-    if ( 6 <= a < 12){
+    if ( a >= 6 && a < 12){
         currentTheme = themes.morning;
-    }if (12 <= a < 18){
+        console.log("the theme is morning");
+
+    }if (a >= 12 && a < 18){
         currentTheme = themes.afternoon;
-    }if (18 <= a <= 23){
+        console.log("the theme is afternoon");
+
+    }if (a >= 18 && a <= 23){
         currentTheme = themes.evening;
-    }else if ( 0 >= a < 6){
+        console.log("the theme is evening");
+
+    }if (a < 6){
         currentTheme = themes.night;
-    }
-console.log(currentTheme);
+        console.log("the theme is night");
+    };
 };
 
 
