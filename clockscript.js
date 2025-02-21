@@ -39,6 +39,10 @@ const themes = {
         clockBoxShadow : 'rgba(212, 175, 55, 0.5)',
         clockBackground : 'rgba(255, 255, 255, 0.8)',
         clockTextShadow : '#ffdb00',
+        sunOpacity : "100",
+        sunTop : "40%",
+        sunLeft : "20%",
+        moonOpacity : "0",
     },
     afternoon: {
         containerBackground : '#aceaff',
@@ -47,6 +51,10 @@ const themes = {
         clockBoxShadow : 'rgba(55, 157, 212, 0.5)',
         clockBackground : 'rgba(230, 254, 255, 0.8)',
         clockTextShadow : '#94cdf8',
+        sunOpacity : "100",
+        sunTop : "10%",
+        sunLeft : "60%",
+        moonOpacity : "0",
     },
     evening: {
         containerBackground : '#475d85',
@@ -55,6 +63,10 @@ const themes = {
         clockBoxShadow : 'rgba(212, 175, 55, 0.5)',
         clockBackground : 'rgba(255, 206, 99, 0.8)',
         clockTextShadow : '#ffdb85',
+        sunOpacity : "50",
+        sunTop : "40%",
+        sunLeft : "80%",
+        moonOpacity : "50",
     },
     night: {
         containerBackground : '#131862',
@@ -63,6 +75,8 @@ const themes = {
         clockBoxShadow : 'rgba(32, 46, 195, 0.6)',
         clockBackground : 'rgba(46,68,130, 0.8)',
         clockTextShadow : '#87889c',
+        sunOpacity : "0",
+        moonOpacity : "100",
     }
 };
 
@@ -92,6 +106,13 @@ function applyTheme(theme){
     document.getElementById('clock').style.boxShadow = theme.clockBoxShadow;
     document.getElementById('clock').style.background = theme.clockBackground;
     document.getElementById('clock').style.textShadow = theme.clockTextShadow;
+    document.getElementById('sun').style.opacity = theme.sunOpacity;
+    document.getElementById('sun').style.top = theme.sunTop;
+    document.getElementById('sun').style.left = theme.sunLeft;
+
+
+    document.getElementById('moon').style.opacity = theme.moonOpacity;
+
 };
 
 
