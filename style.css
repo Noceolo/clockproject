@@ -47,8 +47,8 @@ body {
     top: 10%;
     left: 10%;
     motion-path: path('M 5 5 m -4, 0 a 4,4 0 1,0 8,0 a 4,4 0 1,0 -8,0');
-  offset-path: path('M 5 5 m -4, 0 a 4,4 0 1,0 8,0 a 4,4 0 1,0 -8,0');
-  animation: move 3s linear infinite;
+    offset-path: path('M 5 5 m -4, 0 a 4,4 0 1,0 8,0 a 4,4 0 1,0 -8,0');
+    animation: move 3s linear infinite;
 }
 
 #moon {
