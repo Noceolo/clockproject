@@ -12,8 +12,18 @@
         <div id="title"></div>
         <div id="clock"></div>
         <div id="characterBlock"></div>
-        <img id="sun" src="img/sun.png" alt="sun">
-        <img id="moon" src="img/moon.png" alt="moon">
+        <svg viewbox="0,0 10,10" width="90%" height="90%" id="pathBox">
+  
+            <!-- the path to be animated along -->  
+            <path 
+              class="track"
+              fill="none"
+              stroke-width="0.25"
+              d="M 5 5 m -4, 0 a 4,4 0 1,0 8,0 a 4,4 0 1,0 -8,0"/>
+              
+              <img id="sun" src="img/sun.png" alt="sun">
+              <img id="moon" src="img/moon.png" alt="moon">
+          </svg>
     </div>
 </body>
 </html>
